@@ -1,22 +1,34 @@
-import React from "react";
+import React, { useContext } from "react";
 import corner from "../assets/images/corner.png";
 import devider from "../assets/images/devider.png";
+import MultiLingualContent from "../languages/MultiLingualContent";
+import { LanguageContext } from "../context/LanguageContext";
 
 const About = () => {
+  const { language } = useContext(LanguageContext);
+
   return (
     <div className="section" id="about">
       <img className="devider" src={devider} alt="devider" />
       <img className="corner-top-left" src={corner} alt="" />
       <img className="corner-bottom-right" src={corner} alt="" />
       <div className="about-wrapper inner-section">
-        <h2>ABOUT</h2>
+        <h2
+          style={{
+            fontFamily:
+              language === "hebrew"
+                ? "AmaticSC-Regular"
+                : "JosefinSlab-ExtraLight",
+          }}
+        >
+          <MultiLingualContent contentID="about" />
+        </h2>
         <p>
-          On the slopes of the Jerusalem mountains in a small village near the
-          forest, there is a luxurious guest villa surrounded by a fruit tree
-          garden. We invite you to relax from the day-to-day routine in one of
-          our stunning apartments, and feel the freedom close to nature.
+          <MultiLingualContent contentID="aboutText" />
         </p>
-        <p>Book your next vacation today.</p>
+        <p>
+          <MultiLingualContent contentID="aboutCallForAction" />
+        </p>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import butterfly from "../assets/images/butterfly.png";
 import devider from "../assets/images/devider.png";
 import galleryImages from "../utilities/galleryImages";
 import LazyLoad from "react-lazyload";
+import MultiLingualContent from "../languages/MultiLingualContent";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -32,10 +33,14 @@ const Gallery = () => {
   return (
     <div className="gallery-wrapper inner-section" id="gallery">
       <img className="butterfly" src={butterfly} alt="butterfly" />
-      <h2>GALLERY</h2>
+      <h2>
+        <MultiLingualContent contentID="gallery" />
+      </h2>
       {galleryImages.map(({ name, images }) => (
         <div key={name} className="house-swiper">
-          <h2 className="apartment-name">{name} house</h2>
+          <h2 className="apartment-name">
+            <MultiLingualContent contentID={name} />
+          </h2>
           <Swiper
             slidesPerView={screenWidth < 800 ? 1 : 3}
             spaceBetween={30}
@@ -55,11 +60,13 @@ const Gallery = () => {
                     className="image-card"
                     onClick={() => showImage(src)}
                     src={process.env.PUBLIC_URL + src}
-                    title={title}
-                    alt={title}
+                    title={<MultiLingualContent contentID={title} />}
+                    alt={<MultiLingualContent contentID={title} />}
                   />
                 </LazyLoad>
-                <p className="swiper-image-title">{title}</p>
+                <p className="swiper-image-title">
+                  <MultiLingualContent contentID={title} />
+                </p>
               </SwiperSlide>
             ))}
           </Swiper>

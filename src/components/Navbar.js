@@ -1,10 +1,16 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
+import { LanguageContext } from "../context/LanguageContext";
+import Hebrew from "../assets/images/Hebrew.png";
+import English from "../assets/images/English.png";
+import MultiLingualContent from "../languages/MultiLingualContent";
 
-const NavBar = ({setOpen, open}) => {
+const NavBar = ({ setOpen, open }) => {
   const navbar = useRef();
+  const { language, hebrewLanguage, englishLanguage } =
+    useContext(LanguageContext);
 
-  var myScrollFunc = function () {
-    var y = window.scrollY;
+  let myScrollFunc = function () {
+    let y = window.scrollY;
     if (y >= 100) {
       navbar.current.classList.add("show");
     } else {
@@ -21,31 +27,62 @@ const NavBar = ({setOpen, open}) => {
       <div className="navcolumn1">
         <span className="nav-logo">
           <a className="logo" href="#header">
-            Villa <span className="and-wrapper"><span className="and">&</span></span> Village{" "}
+            Villa{" "}
+            <span className="and-wrapper">
+              <span className="and">&</span>
+            </span>{" "}
+            Village{" "}
           </a>
         </span>
+        <div className="languages">
+          <button className="language" onClick={hebrewLanguage}>
+            <img src={Hebrew} alt="Hebrew" />
+          </button>
+          <button className="language" onClick={englishLanguage}>
+            <img src={English} alt="English" />
+          </button>
+        </div>
       </div>
-      <div className="navcolumn2">
+      <div
+        className="navcolumn2"
+        style={{ direction: language === "hebrew" ? "rtl" : "ltr" }}
+      >
         <span className="nav-text-link">
-          <a href="#about">About</a>
+          <a href="#about">
+            <MultiLingualContent contentID="aboutLink" />
+          </a>
         </span>
         <span className="nav-text-link">
-          <a href="#gallery">Gallery</a>
+          <a href="#gallery">
+            <MultiLingualContent contentID="galleryLink" />
+          </a>
         </span>
         <span className="nav-text-link">
-          <a href="#reviews">Guest Reviews</a>
+          <a href="#reviews">
+            <MultiLingualContent contentID="guestReviewLink" />
+          </a>
         </span>
         <span className="nav-text-link">
-          <a href="#contact">Contact</a>
+          <a href="#contact">
+            <MultiLingualContent contentID="contactLink" />
+          </a>
         </span>
         <span className="nav-text-link">
-          <a href="#location">Location</a>
+          <a href="#location">
+            <MultiLingualContent contentID="locationLink" />
+          </a>
         </span>
       </div>
       <div className="hamburger">
         <div className="container nav-container">
-          <input className="checkbox" type="checkbox" name="" id="" onClick={() => setOpen(!open)} />
-          <div className={`hamburger-lines ${!open ? 'closed' : 'open'}`}>
+          <input
+            className="checkbox"
+            type="checkbox"
+            name=""
+            id=""
+            onClick={() => setOpen(!open)}
+          />
+          <div className={`hamburger-lines ${!open ? "closed" : "open"}`}>
             <span className="line line1"></span>
             <span className="line line2"></span>
             <span className="line line3"></span>
