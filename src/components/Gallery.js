@@ -38,9 +38,9 @@ const Gallery = () => {
       </h2>
       {galleryImages.map(({ name, images }) => (
         <div key={name} className="house-swiper">
-          <h2 className="apartment-name">
+          <h3 className="apartment-name">
             <MultiLingualContent contentID={name} />
-          </h2>
+          </h3>
           <Swiper
             slidesPerView={screenWidth < 800 ? 1 : 3}
             spaceBetween={30}

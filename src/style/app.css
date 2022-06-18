@@ -3,37 +3,67 @@
   src: url("../assets/fonts/GlassAntiqua-Regular.ttf");
 }
 @font-face {
-  font-family: "JosefinSlab-ExtraLight";
+  font-family: "JosefinSlab";
   src: url("../assets/fonts/JosefinSlab-ExtraLight.ttf");
+  font-weight: 200;
 }
 @font-face {
-  font-family: "JosefinSlab-Light";
+  font-family: "JosefinSlab";
   src: url("../assets/fonts/JosefinSlab-Light.ttf");
+  font-weight: 300;
 }
 @font-face {
-  font-family: "JosefinSlab-Thin";
+  font-family: "JosefinSlab";
   src: url("../assets/fonts/JosefinSlab-Thin.ttf");
+  font-weight: 400;
 }
 @font-face {
-  font-family: "JosefinSlab-Regular";
+  font-family: "JosefinSlab";
   src: url("../assets/fonts/JosefinSlab-Regular.ttf");
+  font-weight: 500;
 }
 @font-face {
-  font-family: "JosefinSlab-Medium";
+  font-family: "JosefinSlab";
   src: url("../assets/fonts/JosefinSlab-Medium.ttf");
+  font-weight: 800;
 }
 @font-face {
-  font-family: "JosefinSlab-Bold";
+  font-family: "JosefinSlab";
   src: url("../assets/fonts/JosefinSlab-Bold.ttf");
+  font-weight: 800;
 }
 @font-face {
-  font-family: "AmaticSC-Regular";
-  src: url("../assets/fonts/AmaticSC-Regular.ttf");
+  font-family: "MPLUSRounded1c";
+  src: url("../assets/fonts/MPLUSRounded1c-Thin.ttf");
+  font-weight: 200;
 }
 @font-face {
-  font-family: "AmaticSC-Bold";
-  src: url("../assets/fonts/AmaticSC-Bold.ttf");
+  font-family: "MPLUSRounded1c";
+  src: url("../assets/fonts/MPLUSRounded1c-Light.ttf");
+  font-weight: 300;
 }
+@font-face {
+  font-family: "MPLUSRounded1c";
+  src: url("../assets/fonts/MPLUSRounded1c-Regular.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "MPLUSRounded1c";
+  src: url("../assets/fonts/MPLUSRounded1c-Bold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "MPLUSRounded1c";
+  src: url("../assets/fonts/MPLUSRounded1c-ExtraBold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "MPLUSRounded1c";
+  src: url("../assets/fonts/MPLUSRounded1c-Black.ttf");
+  font-weight: 800;
+}
+
 body,
 html {
   scroll-behavior: smooth;
@@ -53,7 +83,13 @@ body.modal-open {
 }
 
 h2 {
-  font-size: 1.7em;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.6em;
+  font-weight: 300;
 }
 
 .nav {
@@ -64,16 +100,18 @@ h2 {
 .nav-text-link a {
   color: black;
   text-decoration: none;
-  font-family: Helvetica;
   font-size: 22px;
+  font-weight: 500;
   letter-spacing: 0.2px;
   padding-right: 30px;
   transition: all 0.25s;
-
 }
 @media only screen and (max-width: 1400px) {
   .nav-text-link a {
     font-size: 18px;
+  }
+  .nav-text-link a:hover {
+    font-size: 21px;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -442,7 +480,8 @@ header {
 }
 
 header h1 {
-  font-size: 3.5vw;
+  font-size: 2em;
+  font-weight: 300;
   margin: 0.5em 0;
   color: black;
   text-shadow: 2px 5px 7px black;
@@ -474,7 +513,6 @@ header h1 {
   text-align: center;
 }
 .inner-section h2 {
-  font-size: 1.7em;
   margin-bottom: 2em;
 }
 .inner-section p {
@@ -543,6 +581,11 @@ header h1 {
 .about-wrapper {
   width: 40vw;
 }
+
+.about-wrapper p {
+  font-weight: 300;
+}
+
 @media only screen and (max-width: 1150px) {
   .about-wrapper {
     width: 60vw;
@@ -682,7 +725,6 @@ header h1 {
 }
 #reviews h2 {
   margin: 0;
-  font-size: 1.4em;
 }
 @media only screen and (max-width: 800px) {
   #reviews {
@@ -705,7 +747,7 @@ header h1 {
   }
 }
 .reviews-wrapper .swiper {
-  height: 60vh;
+  height: 80vh;
   width: 50vw;
 }
 @media only screen and (max-width: 1000px) {
@@ -730,6 +772,11 @@ header h1 {
 }
 .reviews-wrapper .swiper .author {
   text-align: right;
+  font-weight: 700;
+}
+ .review {
+  font-weight: 500;
+  line-height: 1.3;
 }
 .reviews-wrapper .swiper .swiper-button-next,
 .reviews-wrapper .swiper .swiper-button-prev {
@@ -765,7 +812,7 @@ header h1 {
 .reviews-wrapper .swiper .swiper-slide img {
   width: 1.5em;
   height: 1.5em;
-  margin: 0.5em 0;
+  margin: 0.2em 0;
 }
 
 .reviews-bg {
@@ -812,7 +859,6 @@ header h1 {
   margin: 0;
 }
 .contact-wrapper h2 {
-  font-size: 1.7em;
   margin: 2em 0;
 }
 .contact-wrapper h3 {
@@ -867,6 +913,7 @@ header h1 {
 .contact-wrapper form label {
   font-size: 1.1em;
   margin-bottom: 0.5em;
+  font-weight: 500;
 }
 .contact-wrapper form .bottom {
   display: flex;
@@ -883,21 +930,24 @@ header h1 {
 }
 .contact-wrapper form .bottom .input-wrapper textarea {
   height: 5em;
-  width: -webkit-fill-available;
+  width: 100%;
 }
-.contact-wrapper form input[type="submit"] {
+.contact-wrapper form button[type="submit"] {
   background: black;
   color: white;
   border-radius: 25px;
   margin: 2em 0;
   padding: 0.5em 3em;
   box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.4);
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
   max-width: 10em;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
-.contact-wrapper form input[type="submit"]:hover {
+.contact-wrapper form button[type="submit"]:hover {
   cursor: pointer;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+  transform: scale(0.9);
 }
 .contact-wrapper .thanks {
   text-align: center;
@@ -913,7 +963,6 @@ header h1 {
 }
 .map-wrapper h2 {
   margin: 2em 0;
-  font-size: 1.4em;
 }
 
 footer {

@@ -6,14 +6,14 @@ import About from "./components/About";
 import Gallery from "./components/Gallery";
 import Reviews from "./components/Reviews";
 import Contact from "./components/Contact";
-import Map from "./components/Map";
+import Location from "./components/Location";
 import Footer from "./components/Footer";
 import BurgerMenu from "./components/BurgerMenu";
 import "./style/app.css";
 
 function App() {
   const [open, setOpen] = useState(false);
-  const [language, setLanguage] = useState("hebrew");
+  const [language, setLanguage] = useState("english");
 
   function hebrewLanguage() {
     setLanguage("hebrew");
@@ -28,8 +28,7 @@ function App() {
       className="App"
       style={{
         direction: language === "hebrew" ? "rtl" : "ltr",
-        fontFamily:
-          language === "hebrew" ? "AmaticSC-Regular" : "JosefinSlab-ExtraLight",
+        fontFamily: language === "hebrew" ? "MPLUSRounded1c" : "JosefinSlab",
       }}
     >
       <LanguageContext.Provider
@@ -41,7 +40,7 @@ function App() {
         <Gallery />
         <Reviews />
         <Contact />
-        <Map />
+        <Location />
         <Footer />
         <BurgerMenu open={open} setOpen={setOpen} />
       </LanguageContext.Provider>

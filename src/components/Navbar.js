@@ -27,11 +27,7 @@ const NavBar = ({ setOpen, open }) => {
       <div className="navcolumn1">
         <span className="nav-logo">
           <a className="logo" href="#header">
-            Villa{" "}
-            <span className="and-wrapper">
-              <span className="and">&</span>
-            </span>{" "}
-            Village{" "}
+            <MultiLingualContent contentID="logo" />
           </a>
         </span>
         <div className="languages">
