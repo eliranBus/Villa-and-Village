@@ -124,6 +124,6 @@ export const translations = {
     thankYouForYourInquiry: "תודה על פנייתך!",
     weWillReplyAsSoonAsPossible: "אנו נחזור אליך בהקדם האפשרי.",
     location: "מיקום",
-    allrightsReservedTo: " כל הזכויות שמורות ל",
+    allrightsReservedTo: " כל הזכויות שמורות ל- ",
   },
 };

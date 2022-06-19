@@ -443,6 +443,19 @@ h3 {
   h1 {
     font-size: 1.5em !important;
   }
+  textArea {
+    width: -webkit-fill-available !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #header {
+    padding: 50px 0 !important;
+  }
+  
+.header-logo:before {
+  right: 15%;
+}
 }
 
 .hide {

@@ -60,13 +60,11 @@ const Gallery = () => {
                     className="image-card"
                     onClick={() => showImage(src)}
                     src={process.env.PUBLIC_URL + src}
-                    title={<MultiLingualContent contentID={title} />}
-                    alt={<MultiLingualContent contentID={title} />}
+                    title={title}
+                    alt={title}
                   />
                 </LazyLoad>
-                <p className="swiper-image-title">
-                  <MultiLingualContent contentID={title} />
-                </p>
+                <p className="swiper-image-title">{title}</p>
               </SwiperSlide>
             ))}
           </Swiper>

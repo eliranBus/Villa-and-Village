@@ -11,8 +11,6 @@ import "swiper/css/navigation";
 const Reviews = () => {
   const { language } = useContext(LanguageContext);
 
-  console.log(language);
-
   return (
     <div id="reviews">
       <h2>
