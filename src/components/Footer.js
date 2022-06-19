@@ -10,11 +10,7 @@ const Footer = () => {
         {" "}
         &#169; {year} <MultiLingualContent contentID="allrightsReservedTo" />
         <a className="logo footer-logo" href="#header">
-          Villa{" "}
-          <span className="and-wrapper">
-            <span className="and">&</span>
-          </span>{" "}
-          Village{" "}
+          <MultiLingualContent contentID="logo" />
         </a>
       </p>
     </footer>

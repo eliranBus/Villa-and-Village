@@ -396,17 +396,38 @@ h3 {
   color: #000;
   position: relative;
 }
-.logo:after {
+
+.logo:before {
   position: absolute;
   content: "";
-  background-image: url("../assets/images/house.png");
-  right: 2.2em;
-  top: 35%;
-  transform: translateY(-50%);
-  width: 1.9em;
-  height: 1.6em;
+  background-image: url("../assets/images/roof.png");
+  right: -3%;
+  top: -45%;
+  z-index: -1;
+  /* transform: translateX(50%); */
+  width: 1.2em;
+  height: 1.2em;
   background-size: cover;
 }
+
+.header-logo {
+  position: relative;
+}
+
+.header-logo:before {
+  position: absolute;
+  content: "";
+  background-image: url("../assets/images/roof.png");
+  right: 35%;
+  top: -48%;
+  z-index: -1;
+  /* transform: translateX(50%); */
+  width: 1.2em;
+  height: 1.2em;
+  background-size: cover;
+  z-index: 10;
+}
+
 .logo .and-wrapper {
   padding: 0 0.57em;
   position: relative;

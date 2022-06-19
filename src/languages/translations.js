@@ -6,7 +6,7 @@ export const translations = {
     contactLink: "Contact",
     locationLink: "Location",
     header1: "Welcome to",
-    logo: "Villa & Village",
+    logo: "Villa&Village",
     about: "ABOUT",
     aboutText:
       "On the slopes of the Jerusalem mountains in a small village near the forest, there is a luxurious guest villa surrounded by a fruit tree garden. We invite you to relax from the day-to-day routine in one of our stunning apartments, and feel the freedom close to nature.",
@@ -70,7 +70,7 @@ export const translations = {
     contactLink: "צור קשר",
     locationLink: "מיקום",
     header1: "ברוכים הבאים",
-    logo: "Villa & Village",
+    logo: "Villa&Village",
     about: "אודות",
     aboutText:
       "במורדות הרי ירושלים בכפר קטן ליד היער, שוכנת וילת אירוח מפנקת מוקפת גינת עצי פרי. אנו מזמינים אתכם להירגע משגרת היום יום באחת הדירות המהממות שלנו, ולחוש את החופש קרוב לטבע.",
