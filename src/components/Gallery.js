@@ -37,7 +37,7 @@ const Gallery = () => {
         <MultiLingualContent contentID="gallery" />
       </h2>
       {galleryImages.map(({ name, images }) => (
-        <div key={name} className="house-swiper">
+        <div key={name} className="house-swiper" style={{ direction: "ltr" }}>
           <h3 className="apartment-name">
             <MultiLingualContent contentID={name} />
           </h3>
@@ -60,11 +60,13 @@ const Gallery = () => {
                     className="image-card"
                     onClick={() => showImage(src)}
                     src={process.env.PUBLIC_URL + src}
-                    title={title}
-                    alt={title}
+                    title={<MultiLingualContent contentID={title} />}
+                    alt={<MultiLingualContent contentID={title} />}
                   />
                 </LazyLoad>
-                <p className="swiper-image-title">{title}</p>
+                <p className="swiper-image-title">
+                  <MultiLingualContent contentID={title} />
+                </p>
               </SwiperSlide>
             ))}
           </Swiper>
