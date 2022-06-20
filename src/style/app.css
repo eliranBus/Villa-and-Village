@@ -780,7 +780,7 @@ header h1 {
 @media only screen and (max-width: 1000px) {
   .reviews-wrapper .swiper {
     width: 90%;
-    height: 80vw;
+    height: 60vw;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -791,12 +791,7 @@ header h1 {
     font-size: 3.2vw !important;
   }
 }
-@media only screen and (max-width: 1000px) {
-  .reviews-wrapper .swiper {
-    width: 90%;
-    height: 80vw;
-  }
-}
+
 .reviews-wrapper .swiper .author {
   text-align: right;
   font-weight: 700;
