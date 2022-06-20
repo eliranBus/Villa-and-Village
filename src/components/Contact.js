@@ -4,11 +4,18 @@ import butterfly from "../assets/images/butterfly.png";
 import { init } from "@emailjs/browser";
 import MultiLingualContent from "../languages/MultiLingualContent";
 import { LanguageContext } from "../context/LanguageContext";
+import { TextField, TextareaAutosize } from "@mui/material";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { format } from "date-fns";
 
 init("user_0j1a6D9rvtHlXSxC8781G");
 
 const Contact = () => {
   const [emailSent, setEmailSent] = useState(false);
+  const [checkInDate, setCheckInDate] = useState(null);
+  const [checkOutDate, setCheckOutDate] = useState(null);
   const form = useRef();
   const { language } = useContext(LanguageContext);
 
@@ -53,38 +60,95 @@ const Contact = () => {
           <form ref={form} onSubmit={sendEmail}>
             <div className="top">
               <div className="input-wrapper">
-                <label>
-                  <MultiLingualContent contentID="firstName" />
-                </label>
-                <input type="text" name="user_firstname" required />
+                <TextField
+                  label={<MultiLingualContent contentID="firstName" />}
+                  type="text"
+                  name="user_firstname"
+                  required
+                />
               </div>
               <div className="input-wrapper">
-                <label>
-                  <MultiLingualContent contentID="lastName" />
-                </label>
-                <input type="text" name="user_lastname" />
+                <TextField
+                  label={<MultiLingualContent contentID="lastName" />}
+                  type="text"
+                  name="user_lastname"
+                  required
+                />
               </div>
             </div>
             <div className="top">
               <div className="input-wrapper">
-                <label>
-                  <MultiLingualContent contentID="phone" />
-                </label>
-                <input type="phone" name="user_phone" required />
+                <TextField
+                  label={<MultiLingualContent contentID="phone" />}
+                  type="phone"
+                  name="user_phone"
+                  required
+                />
               </div>
               <div className="input-wrapper">
-                <label>
-                  <MultiLingualContent contentID="email" />
-                </label>
-                <input type="email" name="user_email" required />
+                <TextField
+                  label={<MultiLingualContent contentID="email" />}
+                  type="email"
+                  name="user_email"
+                  required
+                />
+              </div>
+            </div>
+            <div className="top">
+              <div className="input-wrapper calenderInput">
+                <LocalizationProvider dateAdapter={AdapterDateFns}>
+                  <DatePicker
+                    disablePast
+                    label={<MultiLingualContent contentID="checkIn" />}
+                    value={checkInDate}
+                    onChange={(newValue) => {
+                      setCheckInDate(newValue);
+                    }}
+                    renderInput={(params) => <TextField {...params} />}
+                  />
+                </LocalizationProvider>
+                <input
+                  type="hidden"
+                  value={
+                    checkOutDate === null
+                      ? ""
+                      : format(new Date(checkInDate), "dd/MM/yyyy")
+                  }
+                  name="user_checkindate"
+                />
+              </div>
+              <span className="to">
+                <MultiLingualContent contentID="to" />
+              </span>
+              <div className="input-wrapper calenderInput">
+                <LocalizationProvider dateAdapter={AdapterDateFns}>
+                  <DatePicker
+                    disablePast
+                    label={<MultiLingualContent contentID="checkOut" />}
+                    value={checkOutDate}
+                    onChange={(newValue) => {
+                      setCheckOutDate(newValue);
+                    }}
+                    renderInput={(params) => <TextField {...params} />}
+                  />
+                </LocalizationProvider>
+                <input
+                  type="hidden"
+                  value={
+                    checkOutDate === null
+                      ? ""
+                      : format(new Date(checkOutDate), "dd/MM/yyyy")
+                  }
+                  name="user_checkoutdate"
+                />
               </div>
             </div>
             <div className="bottom">
-              <div className="input-wrapper">
+              <div className="input-wrapper textArea-input-wrapper">
                 <label>
                   <MultiLingualContent contentID="message" />
                 </label>
-                <textarea name="message" required />
+                <TextareaAutosize name="message" minRows={7} required />
               </div>
             </div>
             <button

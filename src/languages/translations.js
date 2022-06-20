@@ -61,6 +61,9 @@ export const translations = {
     weWillReplyAsSoonAsPossible: "We will reply as soon as possible.",
     location: "LOCATION",
     allrightsReservedTo: "all rights reserved to",
+    checkIn: "Check-in",
+    checkOut: "Check-out",
+    to: "to",
   },
 
   hebrew: {
@@ -125,5 +128,8 @@ export const translations = {
     weWillReplyAsSoonAsPossible: "אנו נחזור אליך בהקדם האפשרי.",
     location: "מיקום",
     allrightsReservedTo: " כל הזכויות שמורות ל- ",
+    checkIn: "צ'ק-אין",
+    checkOut: "צ'ק-אאוט",
+    to: "עד",
   },
 };

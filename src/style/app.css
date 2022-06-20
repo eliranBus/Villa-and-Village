@@ -64,6 +64,11 @@
   font-weight: 800;
 }
 
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("../assets/fonts/OpenSans-Light.ttf");
+}
+
 body,
 html {
   scroll-behavior: smooth;
@@ -95,6 +100,7 @@ h3 {
 .nav {
   justify-content: space-between;
   direction: ltr !important;
+  z-index: 10;
 }
 
 .nav-text-link a {
@@ -410,13 +416,16 @@ h3 {
 
 .header-logo {
   position: relative;
+  width: max-content;
+  margin: 0 auto;
+  font-size: 5em !important;
 }
 
 .header-logo:before {
   position: absolute;
   content: "";
   background-image: url("../assets/images/roof.png");
-  right: 35%;
+  right: 0%;
   top: -48%;
   z-index: -1;
   width: 1.2em;
@@ -438,10 +447,10 @@ h3 {
     font-size: 1.3em !important;
   }
   .header-logo {
-    font-size: 2em !important;
+    font-size: 3em !important;
   }
   h1 {
-    font-size: 1.5em !important;
+    font-size: 2em !important;
   }
   textArea {
     width: -webkit-fill-available !important;
@@ -452,9 +461,16 @@ h3 {
   #header {
     padding: 50px 0 !important;
   }
+
+  .nav-logo a {
+    padding-left: 0;
+  }
   
-.header-logo:before {
-  right: 25%;
+  h1 {
+    font-size: 1.3em !important;
+  }
+.header-logo {
+  font-size: 2em !important;
 }
 }
 
@@ -889,9 +905,17 @@ header h1 {
   .contact-wrapper form {
     width: 80vw;
   }
+  .MuiFormControl-root, .input-wrapper {
+    width: 100% !important;
+  }
+   .textArea-input-wrapper {
+    margin: 0 !important;
+    margin-top: 2em !important;
+  }
 }
 .contact-wrapper form .top {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
 }
@@ -916,15 +940,20 @@ header h1 {
   border: none;
   font-size: 1.2em;
   width: -webkit-fill-available;
+  font-family: "OpenSans-Light";
 }
-.contact-wrapper form input:hover,
-.contact-wrapper form textarea:hover {
-  border: 1px solid black;
-}
+
 .contact-wrapper form label {
-  font-size: 1.1em;
+  font-size: 0.8em;
   margin-bottom: 0.5em;
+  font-family: "OpenSans-Light";
   font-weight: 500;
+  color: rgba(0, 0, 0, 1);
+}
+.MuiBox-root {
+  margin: 20px !important;
+  /* font-size: 18px; */
+  font-weight: 700;
 }
 .contact-wrapper form .bottom {
   display: flex;
@@ -939,10 +968,7 @@ header h1 {
   margin: 1em;
   width: 100%;
 }
-.contact-wrapper form .bottom .input-wrapper textarea {
-  height: 5em;
-  width: 100%;
-}
+
 .contact-wrapper form button[type="submit"] {
   background: black;
   color: white;
@@ -1020,4 +1046,39 @@ footer {
   .swiper-image-title {
     font-size: 0.5em !important;
   }
+}
+
+fieldset {
+  border: none !important;
+}
+
+.MuiInputAdornment-positionEnd {
+  position: absolute;
+  right: 7px;
+  top: 17px;
+}
+
+label.MuiInputLabel-animated {
+  color: black !important;
+}
+
+label.Mui-focused {
+  color: lightskyblue !important;
+}
+
+.to {
+  font-weight: 500;
+}
+
+/* .calenderInput input {
+  padding-right: 50px !important;
+  padding-left: 0 !important;
+} */
+
+.MuiInputBase-colorPrimary {
+  padding: 0 !important;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input:invalid {
+  box-shadow: 2px 4px 6px rgb(0 0 0 / 20%) !important;
 }
