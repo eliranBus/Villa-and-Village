@@ -1079,6 +1079,6 @@ label.Mui-focused {
   padding: 0 !important;
 }
 
-.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input:invalid {
+input {
   box-shadow: 2px 4px 6px rgb(0 0 0 / 20%) !important;
 }
