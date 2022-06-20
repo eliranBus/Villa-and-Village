@@ -827,7 +827,7 @@ header h1 {
 }
 @media only screen and (max-width: 1200px) {
   .reviews-wrapper .swiper .swiper-slide p {
-    font-size: 1.8vw;
+    font-size: 1.7vw;
   }
 }
 @media only screen and (max-width: 800px) {
@@ -903,7 +903,7 @@ header h1 {
 }
 @media only screen and (max-width: 800px) {
   .contact-wrapper form {
-    width: 80vw;
+    width: 60vw;
   }
   .MuiFormControl-root, .input-wrapper {
     width: 100% !important;
