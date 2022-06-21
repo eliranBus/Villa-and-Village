@@ -3,7 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import butterfly from "../assets/images/butterfly.png";
 import devider from "../assets/images/devider.png";
+import { Paper } from "@mui/material";
 import galleryImages from "../utilities/galleryImages";
+import amenities from "../utilities/amenities";
 import LazyLoad from "react-lazyload";
 import MultiLingualContent from "../languages/MultiLingualContent";
 import "swiper/css";
@@ -38,39 +40,57 @@ const Gallery = () => {
       </h2>
       {galleryImages.map(({ name, images }) => (
         <div key={name} className="house-swiper" style={{ direction: "ltr" }}>
-          <h3 className="apartment-name">
-            <MultiLingualContent contentID={name} />
-          </h3>
-          <Swiper
-            slidesPerView={screenWidth < 800 ? 1 : 3}
-            spaceBetween={30}
-            loop={true}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
-            modules={[Navigation]}
-            className="mySwiper"
-          >
-            {images.map(({ src, title }) => (
-              <SwiperSlide key={src} className="swiper-slide-wrapper">
-                <LazyLoad>
-                  <img
-                    loading="lazy"
-                    className="image-card"
-                    onClick={() => showImage(src)}
-                    src={process.env.PUBLIC_URL + src}
-                    title={<MultiLingualContent contentID={title} />}
-                    alt={<MultiLingualContent contentID={title} />}
-                  />
-                </LazyLoad>
-                <p className="swiper-image-title">
-                  <MultiLingualContent contentID={title} />
-                </p>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <img className="swiperDevider" src={devider} alt="devider" />
+          <Paper elevation={3} className="house-wrapper">
+            <h3 className="apartment-name">
+              <MultiLingualContent contentID={name} />
+            </h3>
+            <Swiper
+              slidesPerView={screenWidth < 800 ? 1 : 3}
+              spaceBetween={30}
+              loop={true}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              modules={[Navigation]}
+              className="mySwiper"
+            >
+              {images.map(({ src, title }) => (
+                <SwiperSlide key={src} className="swiper-slide-wrapper">
+                  <LazyLoad>
+                    <img
+                      loading="lazy"
+                      className="image-card"
+                      onClick={() => showImage(src)}
+                      src={process.env.PUBLIC_URL + src}
+                      title={<MultiLingualContent contentID={title} />}
+                      alt={<MultiLingualContent contentID={title} />}
+                    />
+                  </LazyLoad>
+                  <p className="swiper-image-title">
+                    <MultiLingualContent contentID={title} />
+                  </p>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <ul className="house-amenities">
+              {amenities.map((house) => {
+                if (house.houseName === name) {
+                  return house.list.map(({ imageSrc, title, text }) => (
+                    <li>
+                      <img
+                        src={process.env.PUBLIC_URL + imageSrc}
+                        alt="icon"
+                        className={title}
+                      />
+                      <p>{text}</p>
+                    </li>
+                  ));
+                }
+              })}
+            </ul>
+            <img className="swiperDevider" src={devider} alt="devider" />
+          </Paper>
         </div>
       ))}
 

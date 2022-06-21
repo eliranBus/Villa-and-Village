@@ -665,13 +665,13 @@ header h1 {
 }
 
 .swiper {
-  width: 50%;
+  width: 80%;
   height: 40vw;
   z-index: 0;
 }
 @media only screen and (max-width: 1300px) {
   .swiper {
-    width: 70%;
+    width: 80%;
     height: 40vw;
   }
 }
@@ -1034,7 +1034,7 @@ footer {
 
 .swiperDevider {
   width: 15em;
-  margin-top: 3em;
+  margin-top: 1em;
 }
 
 @media only screen and (max-width: 600px) {
@@ -1076,4 +1076,53 @@ label.Mui-focused {
 
 input {
   box-shadow: 2px 4px 6px rgb(0 0 0 / 20%) !important;
+}
+.house-wrapper {
+  padding: 2em 0;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 80%;
+  margin: 0 auto !important;
+}
+.house-amenities  {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  margin: 2em auto;
+  padding: 0;
+}
+.house-amenities  li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 6em;
+  height: 6em;
+}
+.house-amenities img {
+  height: 1.5em;
+  width: 1.5em;
+  padding: 0.5em;
+}
+.house-amenities img.sm {
+  height: 1.2em;
+  width: 1.2em;
+}
+.house-amenities img.bedrooms {
+  height: 1.9em;
+  width: 1.5em;
+}
+.house-amenities p {
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1;
+  padding-top: 0.5em;
+}
+
+@media only screen and (max-width: 800px) {
+  .house-amenities {
+    flex-wrap: wrap;
+  }
 }
