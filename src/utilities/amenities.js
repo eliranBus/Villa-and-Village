@@ -35,7 +35,7 @@ const amenities = [
     ],
   },
   {
-    houseName: "shacharHouse",
+    houseName: "avivHouse",
     list: [
       {
         imageSrc: "amenities-icons/bed.png",
@@ -70,7 +70,7 @@ const amenities = [
     ],
   },
   {
-    houseName: "avivHouse",
+    houseName: "shacharHouse",
     list: [
       {
         imageSrc: "amenities-icons/bed.png",

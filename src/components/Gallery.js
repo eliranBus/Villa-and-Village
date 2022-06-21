@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import butterfly from "../assets/images/butterfly.png";
-import devider from "../assets/images/devider.png";
 import { Paper } from "@mui/material";
 import galleryImages from "../utilities/galleryImages";
 import amenities from "../utilities/amenities";
@@ -91,7 +90,6 @@ const Gallery = () => {
                 }
               })}
             </ul>
-            <img className="swiperDevider" src={devider} alt="devider" />
           </Paper>
         </div>
       ))}

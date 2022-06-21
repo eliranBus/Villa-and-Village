@@ -132,75 +132,6 @@ const galleryImages = [
     ],
   },
   {
-    name: "shacharHouse",
-    images: [
-      {
-        src: "gallery-images/Shachar/סלון-2.jpg",
-        title: "livingRoom",
-      },
-      {
-        src: "gallery-images/Shachar/סלון-6.jpg",
-        title: "livingRoom",
-      },
-      {
-        src: "gallery-images/Shachar/סלון.jpg",
-        title: "livingRoom",
-      },
-      {
-        src: "gallery-images/Shachar/חדר שינה.jpg",
-        title: "mainBedroom",
-      },
-      {
-        src: "gallery-images/Shachar/חדר שינה-3.jpg",
-        title: "mainBedroom",
-      },
-      {
-        src: "gallery-images/Shachar/חדר שינה-4.jpg",
-        title: "mainBedroom",
-      },
-      {
-        src: "gallery-images/Shachar/חדר שינה-6.jpg",
-        title: "mainBedroom",
-      },
-      {
-        src: "gallery-images/Shachar/מטבח.jpg",
-        title: "kitchen",
-      },
-      {
-        src: "gallery-images/Shachar/מטבח-3-2.jpg",
-        title: "kitchen",
-      },
-      {
-        src: "gallery-images/Shachar/מטבח-4-2.jpg",
-        title: "kitchen",
-      },
-      {
-        src: "gallery-images/Shachar/מטבח-3.jpg",
-        title: "kitchen",
-      },
-      {
-        src: "gallery-images/Shachar/מטבח-4.jpg",
-        title: "kitchen",
-      },
-      {
-        src: "gallery-images/Shachar/חדר-2.jpg",
-        title: "secondBedroom",
-      },
-      {
-        src: "gallery-images/Shachar/חדר-6-2.jpg",
-        title: "secondBedroom",
-      },
-      {
-        src: "gallery-images/Shachar/חדר-6.jpg",
-        title: "secondBedroom",
-      },
-      {
-        src: "gallery-images/Shachar/חדר-6-5.jpg",
-        title: "secondBedroom",
-      },
-    ],
-  },
-  {
     name: "avivHouse",
     images: [
       {
@@ -322,6 +253,75 @@ const galleryImages = [
       {
         src: "gallery-images/Aviv/מקלחת.jpg",
         title: "secondBathroom",
+      },
+    ],
+  },
+  {
+    name: "shacharHouse",
+    images: [
+      {
+        src: "gallery-images/Shachar/סלון-2.jpg",
+        title: "livingRoom",
+      },
+      {
+        src: "gallery-images/Shachar/סלון-6.jpg",
+        title: "livingRoom",
+      },
+      {
+        src: "gallery-images/Shachar/סלון.jpg",
+        title: "livingRoom",
+      },
+      {
+        src: "gallery-images/Shachar/חדר שינה.jpg",
+        title: "mainBedroom",
+      },
+      {
+        src: "gallery-images/Shachar/חדר שינה-3.jpg",
+        title: "mainBedroom",
+      },
+      {
+        src: "gallery-images/Shachar/חדר שינה-4.jpg",
+        title: "mainBedroom",
+      },
+      {
+        src: "gallery-images/Shachar/חדר שינה-6.jpg",
+        title: "mainBedroom",
+      },
+      {
+        src: "gallery-images/Shachar/מטבח.jpg",
+        title: "kitchen",
+      },
+      {
+        src: "gallery-images/Shachar/מטבח-3-2.jpg",
+        title: "kitchen",
+      },
+      {
+        src: "gallery-images/Shachar/מטבח-4-2.jpg",
+        title: "kitchen",
+      },
+      {
+        src: "gallery-images/Shachar/מטבח-3.jpg",
+        title: "kitchen",
+      },
+      {
+        src: "gallery-images/Shachar/מטבח-4.jpg",
+        title: "kitchen",
+      },
+      {
+        src: "gallery-images/Shachar/חדר-2.jpg",
+        title: "secondBedroom",
+      },
+      {
+        src: "gallery-images/Shachar/חדר-6-2.jpg",
+        title: "secondBedroom",
+      },
+      {
+        src: "gallery-images/Shachar/חדר-6.jpg",
+        title: "secondBedroom",
+      },
+      {
+        src: "gallery-images/Shachar/חדר-6-5.jpg",
+        title: "secondBedroom",
       },
     ],
   },

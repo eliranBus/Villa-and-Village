@@ -144,7 +144,7 @@ export const translations = {
     threeDoubleBeds: "3 מיטות זוגיות",
     threeBedrooms: "3 חדרי שינה",
     houndredAndFortySquaredMeters: "140 מטר רבוע",
-    fullyEquipped: "מצויד באופן מושלם",
+    fullyEquipped: "מצוידת ומאובזרת",
     wifi: "אינטרנט אלחוטי",
     freeParking: "חניה בשפע",
     houndredAndTenSquaredMeters: "110 מטר רבוע",
