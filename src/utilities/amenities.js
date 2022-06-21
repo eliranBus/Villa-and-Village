@@ -5,32 +5,32 @@ const amenities = [
       {
         imageSrc: "amenities-icons/bed.png",
         title: "beds",
-        text: "3 double beds",
+        text: "threeDoubleBeds",
       },
       {
         imageSrc: "amenities-icons/bedroom.png",
         title: "bedroom",
-        text: "3 bedrooms",
+        text: "threeBedrooms",
       },
       {
         imageSrc: "amenities-icons/sm.webp",
         title: "sm",
-        text: "140 meters squared",
+        text: "houndredAndFortySquaredMeters",
       },
       {
         imageSrc: "amenities-icons/appliances.webp",
         title: "appliances",
-        text: "Fully equipped",
+        text: "fullyEquipped",
       },
       {
         imageSrc: "amenities-icons/wifi.png",
         title: "wifi",
-        text: "Wifi",
+        text: "wifi",
       },
       {
         imageSrc: "amenities-icons/car.png",
         title: "parking",
-        text: "Free parking",
+        text: "freeParking",
       },
     ],
   },
@@ -40,22 +40,22 @@ const amenities = [
       {
         imageSrc: "amenities-icons/bed.png",
         title: "beds",
-        text: "3 double beds",
+        text: "threeDoubleBeds",
       },
       {
         imageSrc: "amenities-icons/bedroom.png",
         title: "bedroom",
-        text: "3 bedrooms",
+        text: "threeBedrooms",
       },
       {
         imageSrc: "amenities-icons/sm.webp",
         title: "sm",
-        text: "110 meters squared",
+        text: "houndredAndTenSquaredMeters",
       },
       {
         imageSrc: "amenities-icons/appliances.webp",
         title: "appliances",
-        text: "Fully equipped",
+        text: "fullyEquipped",
       },
       {
         imageSrc: "amenities-icons/wifi.png",
@@ -65,7 +65,7 @@ const amenities = [
       {
         imageSrc: "amenities-icons/car.png",
         title: "parking",
-        text: "Free parking",
+        text: "freeParking",
       },
     ],
   },
@@ -75,22 +75,22 @@ const amenities = [
       {
         imageSrc: "amenities-icons/bed.png",
         title: "beds",
-        text: "1 double beds",
+        text: "oneDoubleBed",
       },
       {
         imageSrc: "amenities-icons/bedroom.png",
         title: "bedroom",
-        text: "2 bedrooms",
+        text: "twoBedrooms",
       },
       {
         imageSrc: "amenities-icons//sm.webp",
         title: "sm",
-        text: "70 meters squared",
+        text: "seventySquaredMeters",
       },
       {
         imageSrc: "amenities-icons/appliances.webp",
         title: "appliances",
-        text: "Fully equipped",
+        text: "fullyEquipped",
       },
       {
         imageSrc: "amenities-icons/wifi.png",
@@ -100,7 +100,7 @@ const amenities = [
       {
         imageSrc: "amenities-icons/car.png",
         title: "parking",
-        text: "Free parking",
+        text: "freeParking",
       },
     ],
   },

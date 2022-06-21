@@ -83,7 +83,9 @@ const Gallery = () => {
                         alt="icon"
                         className={title}
                       />
-                      <p>{text}</p>
+                      <p>
+                        <MultiLingualContent contentID={text} />
+                      </p>
                     </li>
                   ));
                 }
