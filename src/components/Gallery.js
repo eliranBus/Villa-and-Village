@@ -148,7 +148,9 @@ const Gallery = () => {
         <Fade in={openModal}>
           <Box sx={modalStyle}>
             <>
-              <h4>All Amenities</h4>
+              <h4>
+                <MultiLingualContent contentID={"all_amenities"} />
+              </h4>
               <ul
                 className="amenities-full-list"
                 style={{ direction: language === "english" ? "ltr" : "rtl" }}
