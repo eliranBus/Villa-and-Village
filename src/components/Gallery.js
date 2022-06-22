@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import butterfly from "../assets/images/butterfly.png";
@@ -7,6 +7,7 @@ import galleryImages from "../utilities/galleryImages";
 import amenities from "../utilities/amenities";
 import LazyLoad from "react-lazyload";
 import MultiLingualContent from "../languages/MultiLingualContent";
+import { LanguageContext } from "../context/LanguageContext";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -28,9 +29,17 @@ const Gallery = () => {
   const [imageToShow, setImageToShow] = useState("");
   const [lightboxDisplay, setLightBoxDisplay] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+  const [currentHouse, setCurrentHouse] = useState();
+  const { language } = useContext(LanguageContext);
 
-  const handleOpenModal = () => setOpenModal(true);
-  const handleCloseModal = () => setOpenModal(false);
+  const handleOpenModal = (house) => {
+    setOpenModal(true);
+    setCurrentHouse(house);
+  };
+  const handleCloseModal = () => {
+    setOpenModal(false);
+    setCurrentHouse();
+  };
 
   useEffect(() => {
     lightboxDisplay === true
@@ -106,7 +115,9 @@ const Gallery = () => {
                 }
               })}
             </ul>
-            <Button onClick={handleOpenModal}>Show all amenities</Button>
+            <Button variant="outlined" onClick={() => handleOpenModal(name)}>
+              Show all amenities
+            </Button>
           </Paper>
         </div>
       ))}
@@ -125,26 +136,27 @@ const Gallery = () => {
         onClose={handleCloseModal}
         closeAfterTransition
         BackdropComponent={Backdrop}
+        className="amenities-modal"
         BackdropProps={{
           timeout: 500,
         }}
       >
         <Fade in={openModal}>
           <Box sx={modalStyle}>
-            <p>
-              Essentials Air conditioning Cleaning products Cooking basics
-              Dedicated workspace Dishes and silverware Heating Kitchen TV
-              Washer Wifi Bathtub Hot water Bed linens Clothing storage Drying
-              rack for clothing Hangers Iron Room-darkening shades Safe Books
-              and reading material Ethernet connection Ping pong table Board
-              games Children’s books and toys Crib High chair Pack ’n
-              play/Travel crib Ceiling fan First aid kit Barbecue utensils
-              Coffee Coffee maker Dining table Dishwasher Freezer Hot water
-              kettle Microwave Oven Refrigerator Stove Toaster Wine glasses
-              Backyard BBQ grill Outdoor dining area Outdoor furniture Patio or
-              balcony Free parking on premises Free street parking Single level
-              home
-            </p>
+            <ul
+              className="amenities-full-list"
+              style={{ direction: language === "english" ? "ltr" : "rtl" }}
+            >
+              {amenities.map((house) => {
+                if (house.houseName === currentHouse) {
+                  return house.fullList.map((amenity) => (
+                    <li>
+                      <MultiLingualContent contentID={amenity} />
+                    </li>
+                  ));
+                }
+              })}
+            </ul>
           </Box>
         </Fade>
       </Modal>

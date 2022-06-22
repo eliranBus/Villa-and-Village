@@ -1074,11 +1074,6 @@ label.Mui-focused {
   font-weight: 500;
 }
 
-/* .calenderInput input {
-  padding-right: 50px !important;
-  padding-left: 0 !important;
-} */
-
 .MuiInputBase-colorPrimary {
   padding: 0 !important;
 }
@@ -1137,7 +1132,23 @@ input {
   line-height: 1;
   padding-top: 0.5em;
 }
-
+.amenities-modal .MuiBox-root {
+  width: 60%;
+  border: 1px solid lightgray !important;
+  font-family: "OpenSans-Light";
+}
+.amenities-full-list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; 
+}
+.amenities-full-list li {
+  padding: 0.5em;
+  margin: 0.2em 1em;
+}
 @media only screen and (max-width: 800px) {
   .house-amenities {
     flex-wrap: wrap;
