@@ -817,7 +817,7 @@ header h1 {
   flex-direction: column;
   line-height: 1.5;
   justify-content: center;
-  padding-top: 1em;
+  padding-top: 0.3em;
 }
 .reviews-wrapper .swiper .swiper-slide p {
   font-size: 1.3em;
@@ -955,7 +955,6 @@ header h1 {
 }
 .MuiBox-root {
   margin: 20px !important;
-  /* font-size: 18px; */
   font-weight: 700;
 }
 .contact-wrapper form .bottom {
@@ -1134,8 +1133,12 @@ input {
 }
 .amenities-modal .MuiBox-root {
   width: 60%;
+  max-height: 70%;
   border: 1px solid lightgray !important;
   font-family: "OpenSans-Light";
+}
+.amenities-modal .MuiBox-root h4 {
+  text-align: center;
 }
 .amenities-full-list {
   width: 100%;
@@ -1148,6 +1151,17 @@ input {
 .amenities-full-list li {
   padding: 0.5em;
   margin: 0.2em 1em;
+  color: gray;
+}
+@media only screen and (max-width: 700px) {
+  .amenities-full-list li {
+    padding: 0.5em;
+    margin: 0em 0.7em;
+  }
+  .amenities-modal .MuiBox-root {
+    transform: translate(-55%, -50%) !important;
+    overflow-y: scroll;
+  }
 }
 @media only screen and (max-width: 800px) {
   .house-amenities {

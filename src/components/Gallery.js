@@ -143,20 +143,23 @@ const Gallery = () => {
       >
         <Fade in={openModal}>
           <Box sx={modalStyle}>
-            <ul
-              className="amenities-full-list"
-              style={{ direction: language === "english" ? "ltr" : "rtl" }}
-            >
-              {amenities.map((house) => {
-                if (house.houseName === currentHouse) {
-                  return house.fullList.map((amenity) => (
-                    <li>
-                      <MultiLingualContent contentID={amenity} />
-                    </li>
-                  ));
-                }
-              })}
-            </ul>
+            <>
+              <h4>All Amenities</h4>
+              <ul
+                className="amenities-full-list"
+                style={{ direction: language === "english" ? "ltr" : "rtl" }}
+              >
+                {amenities.map((house) => {
+                  if (house.houseName === currentHouse) {
+                    return house.fullList.map((amenity) => (
+                      <li>
+                        <MultiLingualContent contentID={amenity} />
+                      </li>
+                    ));
+                  }
+                })}
+              </ul>
+            </>
           </Box>
         </Fade>
       </Modal>
