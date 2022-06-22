@@ -110,6 +110,7 @@ export const translations = {
     free_parking_on_premises: "Free parking on premises",
     free_street_parking: "Free street parking",
     single_level_home: "Single level home",
+    all_amenities: "All Amenities",
   },
 
   hebrew: {
@@ -223,5 +224,6 @@ export const translations = {
     free_parking_on_premises: "חניה חינם במתחם",
     free_street_parking: "חניה חינם ברחוב",
     single_level_home: "מפלס אחד",
+    all_amenities: "כל השירותים",
   },
 };

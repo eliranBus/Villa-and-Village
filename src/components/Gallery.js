@@ -115,8 +115,12 @@ const Gallery = () => {
                 }
               })}
             </ul>
-            <Button variant="outlined" onClick={() => handleOpenModal(name)}>
-              Show all amenities
+            <Button
+              size="small"
+              variant="outlined"
+              onClick={() => handleOpenModal(name)}
+            >
+              <MultiLingualContent contentID={"all_amenities"} />
             </Button>
           </Paper>
         </div>
