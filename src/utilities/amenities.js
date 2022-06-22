@@ -33,6 +33,7 @@ const amenities = [
         text: "freeParking",
       },
     ],
+    fullList: [],
   },
   {
     houseName: "avivHouse",
@@ -68,6 +69,7 @@ const amenities = [
         text: "freeParking",
       },
     ],
+    fullList: [],
   },
   {
     houseName: "shacharHouse",
@@ -103,6 +105,7 @@ const amenities = [
         text: "freeParking",
       },
     ],
+    fullList: [],
   },
 ];
 

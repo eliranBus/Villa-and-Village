@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import butterfly from "../assets/images/butterfly.png";
-import { Paper } from "@mui/material";
+import { Paper, Button, Modal, Fade, Box, Backdrop } from "@mui/material";
 import galleryImages from "../utilities/galleryImages";
 import amenities from "../utilities/amenities";
 import LazyLoad from "react-lazyload";
@@ -12,9 +12,25 @@ import "swiper/css/navigation";
 
 const screenWidth = window.innerWidth;
 
+const modalStyle = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
+
 const Gallery = () => {
   const [imageToShow, setImageToShow] = useState("");
   const [lightboxDisplay, setLightBoxDisplay] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOpenModal = () => setOpenModal(true);
+  const handleCloseModal = () => setOpenModal(false);
 
   useEffect(() => {
     lightboxDisplay === true
@@ -90,6 +106,7 @@ const Gallery = () => {
                 }
               })}
             </ul>
+            <Button onClick={handleOpenModal}>Show all amenities</Button>
           </Paper>
         </div>
       ))}
@@ -101,6 +118,36 @@ const Gallery = () => {
       ) : (
         ""
       )}
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={openModal}
+        onClose={handleCloseModal}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={openModal}>
+          <Box sx={modalStyle}>
+            <p>
+              Essentials Air conditioning Cleaning products Cooking basics
+              Dedicated workspace Dishes and silverware Heating Kitchen TV
+              Washer Wifi Bathtub Hot water Bed linens Clothing storage Drying
+              rack for clothing Hangers Iron Room-darkening shades Safe Books
+              and reading material Ethernet connection Ping pong table Board
+              games Children’s books and toys Crib High chair Pack ’n
+              play/Travel crib Ceiling fan First aid kit Barbecue utensils
+              Coffee Coffee maker Dining table Dishwasher Freezer Hot water
+              kettle Microwave Oven Refrigerator Stove Toaster Wine glasses
+              Backyard BBQ grill Outdoor dining area Outdoor furniture Patio or
+              balcony Free parking on premises Free street parking Single level
+              home
+            </p>
+          </Box>
+        </Fade>
+      </Modal>
     </div>
   );
 };

@@ -536,7 +536,7 @@ header h1 {
 
 @media only screen and (max-width: 500px) {
   .section {
-    margin: 3em 0;
+    margin: 6em 0;
   }
 }
 
@@ -631,6 +631,10 @@ header h1 {
   margin: 13em 0;
 }
 
+#gallery h2 {
+  margin-top: 6em;
+}
+
 #gallery .butterfly {
   position: absolute;
   width: 5em;
@@ -675,7 +679,7 @@ header h1 {
 }
 @media only screen and (max-width: 1300px) {
   .swiper {
-    width: 80%;
+    width: 75%;
     height: 40vw;
   }
 }
@@ -885,7 +889,7 @@ header h1 {
   margin: 0;
 }
 .contact-wrapper h2 {
-  margin: 2em 0;
+  margin: 1em 0 2em;
 }
 .contact-wrapper h3 {
   font-size: 1.3em;
@@ -1089,6 +1093,7 @@ input {
   width: 80%;
   margin: 0 auto !important;
   border-radius: 10px !important;
+  background-color: rgba(0, 0, 0, 0.025) !important;
 }
 .house-amenities  {
   list-style-type: none;
@@ -1101,6 +1106,7 @@ input {
   margin-top: 4em;
   border: 1px solid  lightgray;
   border-radius: 10px;
+  background: white;
 }
 .house-amenities  li{
   display: flex;
@@ -1135,5 +1141,6 @@ input {
 @media only screen and (max-width: 800px) {
   .house-amenities {
     flex-wrap: wrap;
+    width: 72%;
   }
 }
