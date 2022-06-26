@@ -1,5 +1,5 @@
 export const translations = {
-  english: {
+  English: {
     aboutLink: "About",
     galleryLink: "Gallery",
     guestReviewLink: "Guest Review",
@@ -113,7 +113,7 @@ export const translations = {
     all_amenities: "All Amenities",
   },
 
-  hebrew: {
+  Hebrew: {
     aboutLink: "אודות",
     galleryLink: "גלריה",
     guestReviewLink: "ביקורות של אורחים",

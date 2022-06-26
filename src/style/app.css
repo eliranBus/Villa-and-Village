@@ -1181,5 +1181,6 @@ input {
 
 .close-modal {
   color: #000 !important;
-  direction: rtl;
+  padding: 0 !important;
+  min-width: 32px !important;
 }

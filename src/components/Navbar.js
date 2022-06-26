@@ -3,6 +3,7 @@ import { LanguageContext } from "../context/LanguageContext";
 import Hebrew from "../assets/images/Hebrew.png";
 import English from "../assets/images/English.png";
 import MultiLingualContent from "../languages/MultiLingualContent";
+import { setStorageLanguage } from "../utilities";
 
 const NavBar = ({ setOpen, open }) => {
   const navbar = useRef();
@@ -22,6 +23,16 @@ const NavBar = ({ setOpen, open }) => {
     window.addEventListener("scroll", myScrollFunc);
   }, []);
 
+  const handleLanguageChange = (language) => {
+    if (language === "English") {
+      setStorageLanguage("English");
+      englishLanguage();
+    } else {
+      setStorageLanguage("Hebrew");
+      hebrewLanguage();
+    }
+  };
+
   return (
     <nav id="nav" ref={navbar} className="nav hide">
       <div className="navcolumn1">
@@ -31,17 +42,23 @@ const NavBar = ({ setOpen, open }) => {
           </a>
         </span>
         <div className="languages">
-          <button className="language" onClick={hebrewLanguage}>
+          <button
+            className="language"
+            onClick={() => handleLanguageChange("Hebrew")}
+          >
             <img src={Hebrew} alt="Hebrew" />
           </button>
-          <button className="language" onClick={englishLanguage}>
+          <button
+            className="language"
+            onClick={() => handleLanguageChange("English")}
+          >
             <img src={English} alt="English" />
           </button>
         </div>
       </div>
       <div
         className="navcolumn2"
-        style={{ direction: language === "hebrew" ? "rtl" : "ltr" }}
+        style={{ direction: language === "Hebrew" ? "rtl" : "ltr" }}
       >
         <span className="nav-text-link">
           <a href="#about">

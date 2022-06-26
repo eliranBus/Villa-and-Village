@@ -155,7 +155,7 @@ const Contact = () => {
               type="submit"
               style={{
                 fontFamily:
-                  language === "hebrew" ? "MPLUSRounded1c" : "JosefinSlab",
+                  language === "Hebrew" ? "MPLUSRounded1c" : "JosefinSlab",
               }}
             >
               <MultiLingualContent contentID="send" />

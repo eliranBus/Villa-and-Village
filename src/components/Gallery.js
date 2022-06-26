@@ -109,7 +109,7 @@ const Gallery = () => {
               {amenities.map((house) => {
                 if (house.houseName === name) {
                   return house.list.map(({ imageSrc, title, text }) => (
-                    <li>
+                    <li key={imageSrc}>
                       <img
                         src={process.env.PUBLIC_URL + imageSrc}
                         alt="icon"
@@ -164,12 +164,12 @@ const Gallery = () => {
               </h4>
               <ul
                 className="amenities-full-list"
-                style={{ direction: language === "english" ? "ltr" : "rtl" }}
+                style={{ direction: language === "English" ? "ltr" : "rtl" }}
               >
                 {amenities.map((house) => {
                   if (house.houseName === currentHouse) {
-                    return house.fullList.map((amenity) => (
-                      <li>
+                    return house.fullList.map((amenity, index) => (
+                      <li key={index}>
                         <Typography>
                           <MultiLingualContent contentID={amenity} />
                         </Typography>

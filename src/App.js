@@ -9,26 +9,31 @@ import Contact from "./components/Contact";
 import Location from "./components/Location";
 import Footer from "./components/Footer";
 import BurgerMenu from "./components/BurgerMenu";
+import { getStorageLanguage } from "./utilities";
 import "./style/app.css";
+
+const storageLanguage = getStorageLanguage();
 
 function App() {
   const [open, setOpen] = useState(false);
-  const [language, setLanguage] = useState("english");
+  const [language, setLanguage] = useState(
+    storageLanguage ? storageLanguage : "English"
+  );
 
   function hebrewLanguage() {
-    setLanguage("hebrew");
+    setLanguage("Hebrew");
   }
 
   function englishLanguage() {
-    setLanguage("english");
+    setLanguage("English");
   }
 
   return (
     <div
       className="App"
       style={{
-        direction: language === "hebrew" ? "rtl" : "ltr",
-        fontFamily: language === "hebrew" ? "MPLUSRounded1c" : "JosefinSlab",
+        direction: language === "Hebrew" ? "rtl" : "ltr",
+        fontFamily: language === "Hebrew" ? "MPLUSRounded1c" : "JosefinSlab",
       }}
     >
       <LanguageContext.Provider

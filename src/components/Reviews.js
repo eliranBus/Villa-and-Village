@@ -18,7 +18,7 @@ const Reviews = () => {
       </h2>
       <div className="reviews-wrapper">
         <div className="reviews-bg"></div>
-        {language === "english" && (
+        {language === "English" && (
           <Swiper
             navigation={true}
             loop={true}
@@ -35,7 +35,7 @@ const Reviews = () => {
             ))}
           </Swiper>
         )}
-        {language === "hebrew" && (
+        {language === "Hebrew" && (
           <Swiper
             navigation={true}
             loop={true}
