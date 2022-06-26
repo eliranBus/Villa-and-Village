@@ -726,6 +726,15 @@ header h1 {
 .swiper-button-next,
 .swiper-button-prev {
   color: black;
+  transition: 0.25s all ease-in-out;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: white !important;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 @media only screen and (max-width: 800px) {
@@ -1168,4 +1177,9 @@ input {
     flex-wrap: wrap;
     width: 72%;
   }
+}
+
+.close-modal {
+  color: #000 !important;
+  direction: rtl;
 }

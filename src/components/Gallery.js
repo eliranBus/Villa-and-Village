@@ -2,7 +2,15 @@ import React, { useState, useEffect, useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import butterfly from "../assets/images/butterfly.png";
-import { Paper, Button, Modal, Fade, Box, Backdrop } from "@mui/material";
+import {
+  Paper,
+  Button,
+  Modal,
+  Fade,
+  Box,
+  Backdrop,
+  Typography,
+} from "@mui/material";
 import galleryImages from "../utilities/galleryImages";
 import amenities from "../utilities/amenities";
 import LazyLoad from "react-lazyload";
@@ -147,6 +155,9 @@ const Gallery = () => {
       >
         <Fade in={openModal}>
           <Box sx={modalStyle}>
+            <Button className="close-modal" onClick={handleCloseModal}>
+              &#10006;
+            </Button>
             <>
               <h4>
                 <MultiLingualContent contentID={"all_amenities"} />
@@ -159,7 +170,9 @@ const Gallery = () => {
                   if (house.houseName === currentHouse) {
                     return house.fullList.map((amenity) => (
                       <li>
-                        <MultiLingualContent contentID={amenity} />
+                        <Typography>
+                          <MultiLingualContent contentID={amenity} />
+                        </Typography>
                       </li>
                     ));
                   }

@@ -44,6 +44,26 @@ export const englishReviews = [
     review:
       "The place is very beautiful and organized. There is everything and nothing is missing. The landlord was nice and kind!",
   },
+  {
+    author: "Mark",
+    review:
+      "An absolutely stunning property, we had two absolutely gorgeous sunsets, it's been very nicely decorated and the owner was very friendly and accommodating. I would highly recommend.",
+  },
+  {
+    author: "Hagar",
+    review:
+      "We had a wonderful stay at Eliran’s. The apartment is very clean and pleasant, great for a family vacation. The communication with Eliran and his father, Shimon was very smooth and easy. They were both very accommodating and took care of our every need. The surroundings are beautiful and peaceful. We highly recommend this beautiful stay.",
+  },
+  {
+    author: "Donna",
+    review:
+      "Eliran and his father were a pleasure to deal with. We needed a place to stay close to Gush Etzion for our daughters wedding and stayed 2 nights. The pictures truly reflect accurately the beauty and comfort of the rental. Getting ready we were a family of 7 plus bridesmaids, makeup artists, hairdressers, a photographer and videographer and all fit comfortably. We can't wait to see the photographs from the terrace which had the most magnificent view. It was the perfect setting for our event or if you just want a beautiful place to relax.",
+  },
+  {
+    author: "Jennifer",
+    review:
+      "Incredible views, beautiful home. You can watch sunset over the hills from the gorgeous wooden porch. Large windows let in sunlight in this lovely modern home that is tastefully decorated. Host is friendly and welcoming!",
+  },
 ];
 
 export const hebrewReviews = [
@@ -91,5 +111,25 @@ export const hebrewReviews = [
     author: "קרן",
     review:
       "המקום מאוד יפה ומאורגן. יש הכל ולא חסר כלום. בעל הבית היה נחמד ואדיב!",
+  },
+  {
+    author: "מארק",
+    review:
+      "נכס מדהים לחלוטין, היו לנו שתי שקיעות מדהימות, מעוצב יפה מאוד והבעלים היה מאוד ידידותי ומסביר פנים. הייתי ממליץ בחום.",
+  },
+  {
+    author: "הגר",
+    review:
+      "היתה לנו שהייה נפלאה אצל אלירן. הדירה מאוד נקייה ונעימה, מעולה לחופשה משפחתית. התקשורת עם אלירן ואביו, שמעון הייתה מאוד חלקה וקלה. שניהם היו מאוד אדיבים ודאגו לכל הצרכים שלנו. הסביבה יפה ושלווה. אנו ממליצים בחום על השהייה היפה הזו.",
+  },
+  {
+    author: "דונה",
+    review:
+      "אלירן ואביו היו נהדרים. היינו צריכים מקום לינה קרוב לגוש עציון לחתונת בנותינו ונשארנו 2 לילות. התמונות באמת משקפות במדויק את היופי והנוחות של הדירה. התכוננו היינו משפחה של 7 פלוס שושבינות, מאפרים, מעצבי שיער, צלם וצלם וידאו וכולם התאימו בנוחות. אנחנו לא יכולים לחכות לראות את התמונות מהמרפסת שהייתה לה את הנוף המרהיב ביותר. זו הייתה התפאורה המושלמת לאירוע שלנו או אם אתה סתם רוצה מקום יפה להירגע בו.",
+  },
+  {
+    author: "ג'ניפר",
+    review:
+      "נופים מדהימים, בית יפהפה. אתה יכול לצפות בשקיעה מעל הגבעות ממרפסת העץ המדהימה. חלונות גדולים מכניסים אור שמש לבית מודרני מקסים זה המעוצב בטוב טעם. המארח ידידותי ומסביר פנים!",
   },
 ];
