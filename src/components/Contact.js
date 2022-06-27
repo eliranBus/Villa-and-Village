@@ -91,7 +91,10 @@ const Contact = () => {
                   error={!validFirstName && firstName}
                   onChange={(e) => setFirstName(e.target.value)}
                   helperText={
-                    !validFirstName && firstName && "Please enter a valid name"
+                    !validFirstName &&
+                    firstName && (
+                      <MultiLingualContent contentID="validFirstname" />
+                    )
                   }
                 />
               </div>
@@ -105,7 +108,10 @@ const Contact = () => {
                   variant="standard"
                   error={!validLastName && lastName ? true : false}
                   helperText={
-                    !validLastName && lastName && "Please enter a valid name"
+                    !validLastName &&
+                    lastName && (
+                      <MultiLingualContent contentID="validLastname" />
+                    )
                   }
                 />
               </div>
@@ -130,7 +136,8 @@ const Contact = () => {
                   error={!validEmail && email}
                   onChange={(e) => setEmail(e.target.value)}
                   helperText={
-                    !validEmail && email && "Please enter a valid email"
+                    !validEmail &&
+                    email && <MultiLingualContent contentID="validEmail" />
                   }
                 />
               </div>

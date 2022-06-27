@@ -111,6 +111,9 @@ export const translations = {
     free_street_parking: "Free street parking",
     single_level_home: "Single level home",
     all_amenities: "All Amenities",
+    validFirstname: "Please enter a valid firstname",
+    validLastname: "Please enter a valid lastname",
+    validEmail: "Please enter a valid email",
   },
 
   Hebrew: {
@@ -225,5 +228,8 @@ export const translations = {
     free_street_parking: "חניה חינם ברחוב",
     single_level_home: "מפלס אחד",
     all_amenities: "כל השירותים",
+    validFirstname: "אנא הקלד שם פרטי תקין",
+    validLastname: "אנא הקלד שם משפחה תקין",
+    validEmail: "אנא הקלד אימייל תקין",
   },
 };
