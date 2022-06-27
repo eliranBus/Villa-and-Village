@@ -9,11 +9,9 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { format } from "date-fns";
+import { validateString, validateEmail } from "../utilities";
 
 init("user_0j1a6D9rvtHlXSxC8781G");
-
-const validStringRegex = /^[A-Za-zא-ת]+$/;
-const validEmailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 
 const Contact = () => {
   const [firstName, setFirstName] = useState();
@@ -33,13 +31,11 @@ const Contact = () => {
   }, [firstName, lastName, email]);
 
   const validateInputs = () => {
-    firstName?.match(validStringRegex)
+    validateString(firstName)
       ? setValidFirstName(true)
       : setValidFirstName(false);
-    lastName?.match(validStringRegex)
-      ? setValidLastName(true)
-      : setValidLastName(false);
-    email?.match(validEmailRegex) ? setValidEmail(true) : setValidEmail(false);
+    validateString(lastName) ? setValidLastName(true) : setValidLastName(false);
+    validateEmail(email) ? setValidEmail(true) : setValidEmail(false);
   };
 
   const sendEmail = (e) => {
@@ -146,7 +142,6 @@ const Contact = () => {
                     disablePast
                     label={<MultiLingualContent contentID="checkIn" />}
                     value={checkInDate}
-                    variant="standard"
                     onChange={(newValue) => {
                       setCheckInDate(newValue);
                     }}
