@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import butterfly from "../assets/images/butterfly.png";
 import { init } from "@emailjs/browser";
@@ -12,33 +12,59 @@ import { format } from "date-fns";
 
 init("user_0j1a6D9rvtHlXSxC8781G");
 
+const validStringRegex = /^[A-Za-zא-ת]+$/;
+const validEmailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+
 const Contact = () => {
+  const [firstName, setFirstName] = useState();
+  const [lastName, setLastName] = useState();
+  const [email, setEmail] = useState();
   const [emailSent, setEmailSent] = useState(false);
+  const [validFirstName, setValidFirstName] = useState(false);
+  const [validLastName, setValidLastName] = useState(false);
+  const [validEmail, setValidEmail] = useState(false);
   const [checkInDate, setCheckInDate] = useState(null);
   const [checkOutDate, setCheckOutDate] = useState(null);
-  const form = useRef();
   const { language } = useContext(LanguageContext);
+  const form = useRef();
+
+  useEffect(() => {
+    validateInputs();
+  }, [firstName, lastName, email]);
+
+  const validateInputs = () => {
+    firstName?.match(validStringRegex)
+      ? setValidFirstName(true)
+      : setValidFirstName(false);
+    lastName?.match(validStringRegex)
+      ? setValidLastName(true)
+      : setValidLastName(false);
+    email?.match(validEmailRegex) ? setValidEmail(true) : setValidEmail(false);
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_i0tou8o",
-        "template_x0kf70e",
-        form.current,
-        "user_0j1a6D9rvtHlXSxC8781G"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    if (validFirstName && validLastName) {
+      emailjs
+        .sendForm(
+          "service_i0tou8o",
+          "template_x0kf70e",
+          form.current,
+          "user_0j1a6D9rvtHlXSxC8781G"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
 
-    setEmailSent(true);
+      setEmailSent(true);
+    } else {
+    }
   };
 
   return (
@@ -65,6 +91,12 @@ const Contact = () => {
                   type="text"
                   name="user_firstname"
                   required
+                  variant="standard"
+                  error={!validFirstName && firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  helperText={
+                    !validFirstName && firstName && "Please enter a valid name"
+                  }
                 />
               </div>
               <div className="input-wrapper">
@@ -73,6 +105,12 @@ const Contact = () => {
                   type="text"
                   name="user_lastname"
                   required
+                  onChange={(e) => setLastName(e.target.value)}
+                  variant="standard"
+                  error={!validLastName && lastName ? true : false}
+                  helperText={
+                    !validLastName && lastName && "Please enter a valid name"
+                  }
                 />
               </div>
             </div>
@@ -80,9 +118,10 @@ const Contact = () => {
               <div className="input-wrapper">
                 <TextField
                   label={<MultiLingualContent contentID="phone" />}
-                  type="phone"
+                  type="number"
                   name="user_phone"
                   required
+                  variant="standard"
                 />
               </div>
               <div className="input-wrapper">
@@ -91,6 +130,12 @@ const Contact = () => {
                   type="email"
                   name="user_email"
                   required
+                  variant="standard"
+                  error={!validEmail && email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  helperText={
+                    !validEmail && email && "Please enter a valid email"
+                  }
                 />
               </div>
             </div>
@@ -101,6 +146,7 @@ const Contact = () => {
                     disablePast
                     label={<MultiLingualContent contentID="checkIn" />}
                     value={checkInDate}
+                    variant="standard"
                     onChange={(newValue) => {
                       setCheckInDate(newValue);
                     }}
@@ -124,6 +170,7 @@ const Contact = () => {
                 <LocalizationProvider dateAdapter={AdapterDateFns}>
                   <DatePicker
                     disablePast
+                    variant="standard"
                     label={<MultiLingualContent contentID="checkOut" />}
                     value={checkOutDate}
                     onChange={(newValue) => {
@@ -148,7 +195,12 @@ const Contact = () => {
                 <label>
                   <MultiLingualContent contentID="message" />
                 </label>
-                <TextareaAutosize name="message" minRows={7} required />
+                <TextareaAutosize
+                  variant="standard"
+                  name="message"
+                  minRows={7}
+                  required
+                />
               </div>
             </div>
             <button

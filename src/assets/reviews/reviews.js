@@ -1,10 +1,5 @@
 export const englishReviews = [
   {
-    author: "Ehud",
-    review:
-      "Extremely nice, clean, new and equipped apartment. Really nice porch to sit, sip a glass of wine and watch the beautiful sunset over the mountains. Communication with Eliran were efficient. Thanks!",
-  },
-  {
     author: "Donna",
     review:
       "Eliran and his father were a pleasure to deal with. We needed a place to stay close to Gush Etzion for our daughters wedding and stayed 2 nights. The pictures truly reflect accurately the beauty and comfort of the rental. Getting ready we were a family of 7 plus bridesmaids, makeup artists, hairdressers, a photographer and videographer and all fit comfortably. We can't wait to see the photographs from the terrace which had the most magnificent view. It was the perfect setting for our event or if you just want a beautiful place to relax.",
@@ -13,6 +8,11 @@ export const englishReviews = [
     author: "Inbal",
     review:
       "Amazing apartment, furnished and equipped down to the smallest detail! Great location, thin terrace with crazy views and really pleasant. We got exactly what we saw in the pictures and the hosts Eliran and Shimon took care of everything for us! It was amazing",
+  },
+  {
+    author: "Ehud",
+    review:
+      "Extremely nice, clean, new and equipped apartment. Really nice porch to sit, sip a glass of wine and watch the beautiful sunset over the mountains. Communication with Eliran were efficient. Thanks!",
   },
   {
     author: "Tamara",
@@ -68,11 +68,6 @@ export const englishReviews = [
 
 export const hebrewReviews = [
   {
-    author: "אהוד",
-    review:
-      "דירה נחמדה במיוחד, נקייה, חדשה ומאובזרת. מרפסת ממש נחמדה לשבת, ללגום כוס יין ולצפות בשקיעה היפה מעל ההרים. התקשורת עם אלירן הייתה יעילה. תודה!",
-  },
-  {
     author: "דונה",
     review:
       "אלירן ואביו היו נהדרים. היינו צריכים מקום לינה קרוב לגוש עציון לחתונת בנותינו ונשארנו 2 לילות. התמונות באמת משקפות במדויק את היופי והנוחות של הדירה. התכוננו היינו משפחה של 7 פלוס שושבינות, מאפרים, מעצבי שיער, צלם וצלם וידאו וכולם התאימו בנוחות. אנחנו לא יכולים לחכות לראות את התמונות מהמרפסת שהייתה לה את הנוף המרהיב ביותר. זו הייתה התפאורה המושלמת לאירוע שלנו או אם אתה סתם רוצה מקום יפה להירגע בו.",
@@ -81,6 +76,11 @@ export const hebrewReviews = [
     author: "ענבל",
     review:
       "דירה מדהימה, מרוהטת ומאובזרת עד לפרטים הקטנים! מיקום מעולה, מרפסת דק עם נוף מטורף וממש נעים. קיבלנו בדיוק מה שראינו בתמונות והמארחים אלירן ושמעון דאגו לנו להכל! זה היה מדהים.",
+  },
+  {
+    author: "אהוד",
+    review:
+      "דירה נחמדה במיוחד, נקייה, חדשה ומאובזרת. מרפסת ממש נחמדה לשבת, ללגום כוס יין ולצפות בשקיעה היפה מעל ההרים. התקשורת עם אלירן הייתה יעילה. תודה!",
   },
   {
     author: "תמרה",

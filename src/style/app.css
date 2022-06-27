@@ -943,6 +943,7 @@ header h1 {
   justify-content: flex-start;
   margin: 1em;
 }
+
 .contact-wrapper form input,
 .contact-wrapper form textarea {
   background: rgba(0, 0, 0, 0.025);
@@ -1183,4 +1184,10 @@ input {
   color: #000 !important;
   padding: 0 !important;
   min-width: 32px !important;
+}
+
+.MuiFormHelperText-root {
+  font-size: 0.9em !important;
+  position: absolute !important;
+  bottom: -25px !important;
 }
