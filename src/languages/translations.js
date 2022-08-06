@@ -114,6 +114,7 @@ export const translations = {
     validFirstname: "Please enter a valid firstname",
     validLastname: "Please enter a valid lastname",
     validEmail: "Please enter a valid email",
+    hotTub: "hot-tub",
   },
 
   Hebrew: {
@@ -231,5 +232,6 @@ export const translations = {
     validFirstname: "אנא הקלד שם פרטי תקין",
     validLastname: "אנא הקלד שם משפחה תקין",
     validEmail: "אנא הקלד אימייל תקין",
+    hotTub: "ג'קוזי",
   },
 };
